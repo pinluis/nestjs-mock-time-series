@@ -1,5 +1,6 @@
-import { Body, Controller, Delete, Get, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Post, HttpStatus, Res } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Response } from 'express';
 
 @Controller()
 export class AppController {
@@ -7,11 +8,11 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return this.appService.getHello();
+    return "ok";
   }
 
   @Post()
-  createMockTimeSeries(@Body('hertz') a: number, @Body('seconds') b: number){
+  createMockTimeSeries(@Body('sampleRate') a: number, @Body('duration') b: number){
     this.appService.getMockTimeSeries(a,b);
   }
 
