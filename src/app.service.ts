@@ -38,6 +38,7 @@ export class AppService {
     const path = './dist/data/MockTimeSeries.csv'
     try {
       fs.unlinkSync(path)
+      console.log('done.')
       //file removed
     } catch(err) {
       console.error(err)
