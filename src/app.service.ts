@@ -31,8 +31,16 @@ export class AppService {
       if (err) throw err;
       console.log('done.')
   }); 
-      // Deletes the values of the array, so that it can be filled again in the next loop
-      // mockTimeSeries = null
-  } return "ok";
+  } return console.log('ok');
+  }
+  // Deletes the CSV File
+  deleteMockTimeSeries(){
+    const path = './dist/data/MockTimeSeries.csv'
+    try {
+      fs.unlinkSync(path)
+      //file removed
+    } catch(err) {
+      console.error(err)
+    }
   }
 }
