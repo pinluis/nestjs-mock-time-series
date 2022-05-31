@@ -5,7 +5,7 @@ const path = require('path');
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Hello World!';
+    return 'ok';
   }
   getMockTimeSeries(sampleRate: number,duration: number) {
     // Loops function b-times to instantiate more arrays. "Seconds"
