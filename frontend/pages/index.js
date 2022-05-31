@@ -13,7 +13,7 @@ export default function Home() {
       <h1>Generate a Mock Time Series</h1>
       <form>
         <div className={styles.input}>
-          Samplerate:
+          Sample rate:
           <input type='number' />
         </div>
         <div className={styles.input}>
